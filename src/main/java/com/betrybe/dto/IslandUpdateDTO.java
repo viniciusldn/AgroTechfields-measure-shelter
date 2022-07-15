@@ -1,13 +1,13 @@
 package com.betrybe.dto;
 
 public class IslandUpdateDTO {
-  private Double area;
+  private boolean status;
 
-  public Double getarea() {
-    return area;
+  public Boolean getStatus() {
+    return status;
   }
 
-  public void setarea(Double area) {
-    this.area = area;
+  public void setStatus(Boolean status) {
+    this.status = status;
   }
 }

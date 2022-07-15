@@ -3,7 +3,7 @@ package com.betrybe.dto;
 public class IslandCreateDTO {
   private String nome;
   private String agriculture;
-  private Double area;
+  private boolean status;
 
   public String getNome() {
     return nome;
@@ -13,19 +13,19 @@ public class IslandCreateDTO {
     this.nome = nome;
   }
 
-  public String getagriculture() {
+  public String getAgriculture() {
     return agriculture;
   }
 
-  public void setagriculture(String agriculture) {
+  public void setAgriculture(String agriculture) {
     this.agriculture = agriculture;
   }
 
-  public Double getarea() {
-    return area;
+  public Boolean getStatus() {
+    return status;
   }
 
-  public void setarea(Double area) {
-    this.area = area;
+  public void setArea(Boolean status) {
+    this.status = status;
   }
 }
