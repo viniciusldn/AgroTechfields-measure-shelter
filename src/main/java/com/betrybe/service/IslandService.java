@@ -27,15 +27,15 @@ public class IslandService {
   public void salvar(IslandCreateDTO islandDto){
       var island = new IslandModel();
       island.setNome(islandDto.getNome());
-      island.setAno(islandDto.getAno());
-      island.setPreco(islandDto.getPreco());
-      islandRepository.persist(carro);
+      island.setAgriculture(islandDto.getAgriculture());
+      island.setStatus(islandDto.getStatus());
+      islandRepository.persist(island);
   }
 
   @Transactional
   public void atualizar(IslandUpdateDTO islandDto, Long id){
      var island = islandRepository.findById(id);
-     island.setPreco(islandDto.getPreco());
+     island.setStatus(islandDto.getStatus());
      islandRepository.persist(island);
   }
 
