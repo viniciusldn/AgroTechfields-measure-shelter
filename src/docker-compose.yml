@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  spring-data:
+    image: spring-data
+    build: .
+    restart: always
+    ports:
+      - 8888:8888
+    links:
+      - mongodb:database
+  mongodb:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITD_ROOT_USERNAME: root
+      MONGO_INITD_ROOT_PASSWORD: root
+    ports:
+      - 27017:27017
