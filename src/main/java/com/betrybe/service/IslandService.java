@@ -5,9 +5,12 @@ import com.betrybe.dto.IslandUpdateDTO;
 import com.betrybe.model.IslandModel;
 import com.betrybe.repository.IslandRepository;
 import java.util.List;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
+@ApplicationScoped
 public class IslandService {
 
   @Inject
