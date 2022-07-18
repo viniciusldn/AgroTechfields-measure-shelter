@@ -1,10 +1,8 @@
 package com.betrybe.controller;
 
-import com.betrybe.dto.IslandCreateDTO;
-import com.betrybe.dto.IslandUpdateDTO;
-import com.betrybe.model.IslandModel;
-import com.betrybe.service.IslandService;
 import java.util.List;
+
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -15,6 +13,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
+import com.betrybe.dto.IslandCreateDTO;
+import com.betrybe.model.Island;
+import com.betrybe.service.IslandService;
+
+import org.bson.types.ObjectId;
 
 @Path("/island")
 @Produces(MediaType.APPLICATION_JSON)
@@ -22,34 +28,57 @@ import javax.ws.rs.core.MediaType;
 public class IslandController {
 
   @Inject
-  private IslandService islandService;
+  private IslandService service;
 
+  // Isles end-points.
   @GET
-  public List<IslandModel> listar() {
-    return islandService.listar();
+  @Path("/island")
+  public Response listAll() {
+    try {
+      service.list();
+      return Response.status(Status.OK).build();
+    } catch (Exception e) {
+      throw new Error(e.getMessage());
+    }
   }
 
   @GET
-  @Path("/{id}")
-  public IslandModel buscarPorId(@PathParam("id") Long id) {
-    return islandService.buscarPorId(id);
+  @Path("/island/{id}")
+  public Response findById(@PathParam(value = "id") ObjectId id) {
+    try {
+      service.findById(id);
+      return Response.status(Status.OK).build();
+    } catch (Exception e) {
+      throw new Error(e.getMessage());
+    }
   }
 
   @POST
-  public void salvar(IslandCreateDTO islandDTO) {
-    islandService.salvar(islandDTO);
+  @Path("/island")
+  public Response createIsland(@Val IslandCreateDTO island) {
+    try {
+      service.create(island);
+      return Response.status(Status.CREATED).build();
+    } catch (Exception e) {
+      throw new Error(e.getMessage());
+    }
   }
 
   @PATCH
-  @Path("/{id}")
-  public void atualizar(@PathParam("id") Long id, IslandUpdateDTO islandDTO) {
-    islandService.atualizar(islandDTO, id);
+  @Path("/island/{id}")
+  public Response updateIsland(@PathParam(value = "id") String id) {
+    try {
+      service.update(island);
+      return Response.status(Status.ACCEPTED).build();
+    } catch (Exception e) {
+      throw new Error(e.getMessage());
+    }
   }
 
   @DELETE
-  @Path("/{id}")
-  public void deletar(@PathParam("id") Long id) {
-    islandService.deletar(id);
+  @Path("/island/{id}")
+  public String deleteIsland(@PathParam(value = "id") String id) {
+    return String.format("Deleting Island %s", id);
   }
 
 }

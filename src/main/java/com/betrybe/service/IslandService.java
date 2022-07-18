@@ -2,46 +2,52 @@ package com.betrybe.service;
 
 import com.betrybe.dto.IslandCreateDTO;
 import com.betrybe.dto.IslandUpdateDTO;
-import com.betrybe.model.IslandModel;
+import com.betrybe.model.Island;
 import com.betrybe.repository.IslandRepository;
+
+import org.bson.types.ObjectId;
+
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
+/**
+ * The Class IslandService.
+ */
 @ApplicationScoped
 public class IslandService {
 
   @Inject
-  private IslandRepository islandRepository;
+  private IslandRepository repo;
 
-  public List<IslandModel> listar() {
-    return islandRepository.listAll();
+  public List<Island> list() {
+    return repo.listAll();
   }
 
-  public IslandModel buscarPorId(Long id) {
-    return islandRepository.findById(id);
-  }
-
-  @Transactional
-  public void salvar(IslandCreateDTO islandDto) {
-    var island = new IslandModel();
-    island.setNome(islandDto.getName());
-    island.setAgriculture(islandDto.getAgriculture());
-    island.setStatus(islandDto.getStatus());
-    islandRepository.persist(island);
+  public Island findById(ObjectId id) {
+    return repo.find("id", id).firstResult();
   }
 
   @Transactional
-  public void atualizar(IslandUpdateDTO islandDto, Long id) {
-    var island = islandRepository.findById(id);
-    island.setStatus(islandDto.getStatus());
-    islandRepository.persist(island);
+  public void create(IslandCreateDTO dto) {
+    Island island = new Island();
+    island.setNome(dto.getName());
+    island.setAgriculture(dto.getAgriculture());
+    island.setStatus(dto.getStatus());
+    repo.persist(island);
   }
 
   @Transactional
-  public void deletar(Long id) {
-    islandRepository.deleteById(id);
+  public void update(IslandUpdateDTO dto, ObjectId id) {
+    Island island = findById(id);
+    island.setStatus(dto.getStatus());
+    repo.persist(island);
+  }
+
+  @Transactional
+  public void deletar(ObjectId id) {
+    repo.deleteById(id);
   }
 }

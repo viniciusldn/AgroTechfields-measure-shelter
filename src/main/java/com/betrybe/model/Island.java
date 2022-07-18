@@ -1,12 +1,11 @@
 package com.betrybe.model;
 
-import org.bson.types.ObjectId;
-
+import org.bson.types.ObjectId;import javax.
 import io.quarkus.mongodb.panache.PanacheMongoEntity;
 import io.quarkus.mongodb.panache.common.MongoEntity;
 
 @MongoEntity
-public class IslandModel extends PanacheMongoEntity {
+public class Island extends PanacheMongoEntity {
 
   private ObjectId id;
   private String name;
