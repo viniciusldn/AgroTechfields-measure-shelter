@@ -2,9 +2,7 @@ package com.betrybe.controller;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
-import javax.ws.rs.PATCH;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -14,20 +12,20 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import com.betrybe.dto.IslandCreateDTO;
-import com.betrybe.dto.IslandUpdateDTO;
+import com.betrybe.dto.SatelliteDataCreateDTO;
 import com.betrybe.service.IslandService;
+import com.betrybe.service.SatelliteService;
 
 import org.bson.types.ObjectId;
 
-@Path("/island")
+@Path("/satellite")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class IslandController {
-
+public class SatelliteDataController {
   @Inject
-  private IslandService service;
+  private SatelliteService service;
 
-  // Isles end-points.
+  // Satellite End-points.
   @GET
   public Response listAll() {
     try {
@@ -50,36 +48,12 @@ public class IslandController {
   }
 
   @POST
-  public Response createIsland(IslandCreateDTO island) {
+  public Response createIsland(SatelliteDataCreateDTO data) {
     try {
-      service.create(island);
+      service.create(data);
       return Response.status(Status.CREATED).build();
     } catch (Exception e) {
       throw new Error(e.getMessage());
     }
   }
-
-  @PATCH
-  @Path("/{id}")
-  public Response updateIsland(@PathParam(value = "id") ObjectId id,
-      IslandUpdateDTO island) {
-    try {
-      service.update(id, island);
-      return Response.status(Status.ACCEPTED).build();
-    } catch (Exception e) {
-      throw new Error(e.getMessage());
-    }
-  }
-
-  @DELETE
-  @Path("/{id}")
-  public Response deleteIsland(@PathParam(value = "id") ObjectId id) {
-    try {
-      service.deleteById(id);
-      return Response.status(Status.NO_CONTENT).build();
-    } catch (Exception e) {
-      throw new Error(e.getMessage());
-    }
-  }
-
 }

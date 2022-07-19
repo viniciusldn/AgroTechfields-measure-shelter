@@ -6,7 +6,10 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
+import com.betrybe.dto.SatelliteDataCreateDTO;
+import com.betrybe.model.Island;
 import com.betrybe.model.SatelliteData;
+import com.betrybe.repository.IslandRepository;
 import com.betrybe.repository.SatelliteRepository;
 
 import org.bson.types.ObjectId;
@@ -16,6 +19,8 @@ public class SatelliteService {
 
   @Inject
   private SatelliteRepository repo;
+  @Inject
+  private IslandRepository islandRepo;
 
   public List<SatelliteData> list() {
     return repo.listAll();
@@ -26,7 +31,13 @@ public class SatelliteService {
   }
 
   @Transactional
-  public void create(String path) {
+  public void create(SatelliteDataCreateDTO data) {
+    SatelliteData satelliteData = new SatelliteData();
+    satelliteData.setLocation(data.getLocation());
+    repo.persist(satelliteData);
+    Island island = islandRepo.find("location", data.getLocation())
+        .firstResult();
+    island.setImageList(satelliteData.getImagePath());
   }
 
 }
