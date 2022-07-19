@@ -6,8 +6,6 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
-import com.betrybe.dto.IslandCreateDTO;
-import com.betrybe.model.Island;
 import com.betrybe.model.SatelliteData;
 import com.betrybe.repository.SatelliteRepository;
 
