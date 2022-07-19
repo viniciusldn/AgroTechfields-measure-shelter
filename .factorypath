@@ -1,16 +1,7 @@
 <factorypath>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-resteasy-reactive-jsonb/2.10.2.Final/quarkus-resteasy-reactive-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/resteasy/reactive/resteasy-reactive-jsonb/2.10.2.Final/resteasy-reactive-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/resteasy/reactive/resteasy-reactive/2.10.2.Final/resteasy-reactive-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/yasson/1.0.11/yasson-1.0.11.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/json/bind/jakarta.json.bind-api/1.0.2/jakarta.json.bind-api-1.0.2.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-resteasy-reactive-jsonb-common/2.10.2.Final/quarkus-resteasy-reactive-jsonb-common-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-jsonb/2.10.2.Final/quarkus-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-mongodb-client/2.10.2.Final/quarkus-mongodb-client-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-hibernate-validator/2.10.2.Final/quarkus-hibernate-validator-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-core/2.10.2.Final/quarkus-core-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/enterprise/jakarta.enterprise.cdi-api/2.0.2/jakarta.enterprise.cdi-api-2.0.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/el/jakarta.el-api/3.0.3/jakarta.el-api-3.0.3.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/interceptor/jakarta.interceptor-api/1.2.5/jakarta.interceptor-api-1.2.5.jar" enabled="true" runInBatchMode="false"/>
@@ -24,6 +15,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/common/smallrye-common-function/1.13.0/smallrye-common-function-1.13.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/common/smallrye-common-classloader/1.13.0/smallrye-common-classloader-1.13.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/config/smallrye-config-common/2.10.1/smallrye-config-common-2.10.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logmanager/jboss-logmanager-embedded/1.0.10/jboss-logmanager-embedded-1.0.10.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/threads/jboss-threads/3.4.2.Final/jboss-threads-3.4.2.Final.jar" enabled="true" runInBatchMode="false"/>
@@ -33,6 +25,20 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/wildfly/common/wildfly-common/1.5.4.Final-format-001/wildfly-common-1.5.4.Final-format-001.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-bootstrap-runner/2.10.2.Final/quarkus-bootstrap-runner-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-fs-util/0.0.9/quarkus-fs-util-0.0.9.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/hibernate/validator/hibernate-validator/6.2.3.Final/hibernate-validator-6.2.3.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/glassfish/jakarta.el/3.0.4/jakarta.el-3.0.4.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/config/smallrye-config-validator/2.10.1/smallrye-config-validator-2.10.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-resteasy-reactive-jsonb/2.10.2.Final/quarkus-resteasy-reactive-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/resteasy/reactive/resteasy-reactive-jsonb/2.10.2.Final/resteasy-reactive-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/resteasy/reactive/resteasy-reactive/2.10.2.Final/resteasy-reactive-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/yasson/1.0.11/yasson-1.0.11.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/json/bind/jakarta.json.bind-api/1.0.2/jakarta.json.bind-api-1.0.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-resteasy-reactive-jsonb-common/2.10.2.Final/quarkus-resteasy-reactive-jsonb-common-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-jsonb/2.10.2.Final/quarkus-jsonb-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-mongodb-client/2.10.2.Final/quarkus-mongodb-client-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-mutiny/2.10.2.Final/quarkus-mutiny-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/reactive/mutiny/1.6.0/mutiny-1.6.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-smallrye-context-propagation/2.10.2.Final/quarkus-smallrye-context-propagation-2.10.2.Final.jar" enabled="true" runInBatchMode="false"/>
