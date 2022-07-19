@@ -67,6 +67,7 @@ public class IslandController {
       service.update(id, island);
       return Response.status(Status.ACCEPTED).build();
     } catch (Exception e) {
+      service.updateStatus(id);
       throw new Error(e.getMessage());
     }
   }

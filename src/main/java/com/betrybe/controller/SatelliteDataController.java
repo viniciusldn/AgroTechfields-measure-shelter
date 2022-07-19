@@ -11,9 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import com.betrybe.dto.IslandCreateDTO;
 import com.betrybe.dto.SatelliteDataCreateDTO;
-import com.betrybe.service.IslandService;
 import com.betrybe.service.SatelliteService;
 
 import org.bson.types.ObjectId;
